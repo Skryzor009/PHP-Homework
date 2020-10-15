@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>Developer News</h1>
-
 <?php
 $myfrm = '
 <!doctype html>
@@ -67,6 +61,3 @@ if (!isset($_POST['sir_numere'])) {
 
 	}
 }
-
-</body>
-</html> 
