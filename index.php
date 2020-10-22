@@ -5,6 +5,27 @@
       <input type="submit" name="submit" value="Submit">  
 </form>
 
+<form class="delete" action="" method="post">
+      id: <input type="number" name="name" value="<?php echo $numberId;?>">
+      <button type="submit" name="sub" value="">Delete</button>
+
+ <?php
+
+
+if (isset($_POST['name'])){
+
+
+  $sql = "DELETE FROM TvLEwEK10r.Table_1 WHERE ID=".$_POST['name'];
+  if ($conn->query($sql) === TRUE) {
+    //echo "Record deleted successfully";
+  } else {
+    //echo "Error deleting record: " . $conn->error;
+  }
+}
+
+?>
+</form>
+
 <?php
 
   //Conection to database
