@@ -22,14 +22,6 @@
   }
   echo "Connected successfully";
 
-  if (empty($_POST["Furnizori"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = $_POST["Furnizori"];
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
 
 
 
