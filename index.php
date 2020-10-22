@@ -16,21 +16,19 @@
 
 
 
-  
-  $sql = "SELECT idnew_table,name, email, password FROM o8LxL7h9xu.form_table";
+
+  $sql = "SELECT ID, Furnizori, FROM TvLEwEK10r.table_1";
   $result = $conn->query($sql);
   echo "<br><h2>Your Input:</h2>";
   echo '<table><tr>';
-  echo '<th>'."id ".'</th>';
-  echo '<th>'."Nume ".'</th>';
-  echo '<th>'."Email".'</th>';
-  echo '<th>'."Parola".'</th>';
+  echo '<th>'."ID ".'</th>';
+  echo '<th>'."Furnizori ".'</th>';
   
   echo '</tr><tbody>';
   if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		echo '<tr>';
-		echo "<td>". $row["idnew_table"].'</td>'."<td>". $row["name"].'</td>'. "<td>". $row["email"].'</td>'. "<td>" . $row["password"] .'</td>';
+		echo "<td>". $row["ID"].'</td>'."<td>". $row["Furnizori"].'</td>';
 		echo '</tr>';
 	}
   } else {
