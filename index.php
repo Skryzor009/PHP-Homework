@@ -1,3 +1,11 @@
+
+
+<form class="form1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+    <h2>Placeholder Lorem Ipsum</h2>
+      Furnizori: <input type="text" name="Furnizori" value="<?php echo $Furnizori;?>">
+      <input type="submit" name="submit" value="Submit">  
+</form>
+
 <?php
 
   //Conection to database
@@ -15,6 +23,13 @@
   echo "Connected successfully";
 
 
+	$sql = "INSERT INTO TvLEwEK10r.Table_1 (Furnizori)
+		VALUES ('$Furnizori')";
+	if ($conn->query($sql) === TRUE) {
+	echo "New record created successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 
 
   $sql = "SELECT ID, Furnizori FROM TvLEwEK10r.Table_1";
@@ -35,73 +50,4 @@
 	echo "0 results";
   }
 
-
-
-
-
-
-
-
-$myfrm = '
-<!doctype html>
-<html>
-<form method="POST" action="">
-<input type="text"
-size="48"
-name="sir_numere"
-placeholder="introduceti numerele separate prin virgula">
-<input type="submit">
-</form>';
-
-if (!isset($_POST['sir_numere'])) {
-
-	echo "<br/>vom aduna cateva numere $myfrm";
-
-} else {
-
-	// echo $myfrm;
-
-	$sir = $_POST['sir_numere'];
-	$arr = explode(',', $sir);
-	$nr = count($arr);
-	$v = 0;
-
-	if ($nr > 1) {
-
-		$sir = "";
-		$sum = 0;
-
-		foreach ($arr as $value) {
-
-			if (!preg_match("/^[0-9]*$/", $value)) {
-
-				echo "valori incorecte";
-				echo "<form><input type='submit' value='clear'></form>";
-				$v = 1;
-				break;
-
-			} else {
-
-				$sum += $value;
-				$sir .= $value . " + ";
-
-			}
-
-		}
-
-		if ($v == 0) {
-
-			echo "<br/>suma celor $nr numere: ";
-			$sir = substr($sir, 0, -3);
-			echo "$sir = <span style='border:1px solid grey;padding:3px;background-color:#dedede;'> 
-				$sum </span><br/><br/><form><input type='submit' value='clear'></form>";
-		}
-
-	} else {
-
-		echo "valori insuficiente";
-		echo "<form><input type='submit' value='clear'></form>";
-
-	}
-}
 ?>
