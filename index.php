@@ -17,9 +17,9 @@ if (isset($_POST['name'])){
 
   $sql = "DELETE FROM TvLEwEK10r.Table_1 WHERE ID=".$_POST['name'];
   if ($conn->query($sql) === TRUE) {
-    //echo "Record deleted successfully";
+	echo "Record deleted successfully";
   } else {
-    //echo "Error deleting record: " . $conn->error;
+	echo "Error deleting record: " . $conn->error;
   }
 }
 
