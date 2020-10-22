@@ -17,7 +17,7 @@
 
 
 
-  $sql = "SELECT ID, Furnizori, FROM TvLEwEK10r.table_1";
+  $sql = "SELECT ID, Furnizori FROM TvLEwEK10r.Table_1";
   $result = $conn->query($sql);
   echo "<br><h2>Your Input:</h2>";
   echo '<table><tr>';
