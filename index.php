@@ -1,5 +1,4 @@
 
-
 <form class="form1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <h2>Placeholder Lorem Ipsum</h2>
       Furnizori: <input type="text" name="Furnizori" value="<?php echo $Furnizori;?>">
@@ -31,7 +30,7 @@
     }
   }
 
-
+if($Furnizori==""){
 	$sql = "INSERT INTO TvLEwEK10r.Table_1 (Furnizori)
 		VALUES ('$Furnizori')";
 	if ($conn->query($sql) === TRUE) {
@@ -39,7 +38,7 @@
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error;
 	}
-
+}
 
   $sql = "SELECT ID, Furnizori FROM TvLEwEK10r.Table_1";
   $result = $conn->query($sql);
