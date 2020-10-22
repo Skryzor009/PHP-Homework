@@ -38,6 +38,7 @@ if($Furnizori!=""){
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error;
 	}
+	$Furnizori="";
 }
 
   $sql = "SELECT ID, Furnizori FROM TvLEwEK10r.Table_1";
