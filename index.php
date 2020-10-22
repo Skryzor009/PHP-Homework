@@ -22,7 +22,14 @@
   }
   echo "Connected successfully";
 
-
+  if (empty($_POST["Furnizori"])) {
+    $FurnizoriErr = "Name is required";
+  } else {
+    $Furnizori = $_POST["Furnizori"];
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$Furnizori)) {
+      $FurnizoriErr = "Only letters and white space allowed";
+    }
+  }
 
 
 	$sql = "INSERT INTO TvLEwEK10r.Table_1 (Furnizori)
