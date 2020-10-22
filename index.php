@@ -73,8 +73,8 @@ if ($_POST["Furnizori"] != "") {
 
 	if (isset($_POST['edit'])) {
 
-		$FurnizoriName=$_POST['edidoi'];
-		$sql = "UPDATE TvLEwEK10r.Table_1 SET Furnizori = '$FurnizoriName' WHERE ID =".$_POST['edit'];
+		$FurnizoriName = $_POST['edidoi'];
+		$sql = "UPDATE TvLEwEK10r.Table_1 SET Furnizori = '$FurnizoriName' WHERE ID =" . $_POST['edit'];
 		if ($conn->query($sql) === TRUE) {
 			echo "Record edited successfully";
 		} else {
