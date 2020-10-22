@@ -65,7 +65,7 @@ if ($_POST["Furnizori"] != "") {
 
 <form class="delete" action="" method="post">
 	id: <input type="number" name="edit" value="<?php echo $EditNumberID; ?>">
-	Furnizori: <input type="number" name="edit" value="<?php echo $FurnizoriName; ?>">
+	Furnizori: <input type="text" name="edidoi" value="<?php echo $FurnizoriName; ?>">
 	<button type="submit" name="sub" value="">Edit</button>
 
 	<?php
@@ -73,7 +73,7 @@ if ($_POST["Furnizori"] != "") {
 
 	if (isset($_POST['edit'])) {
 
-
+		$FurnizoriName=$_POST['edidoi'];
 		$sql = "UPDATE TvLEwEK10r.Table_1 SET Furnizori = '$FurnizoriName' WHERE ID =".$_POST['edit'];
 		if ($conn->query($sql) === TRUE) {
 			echo "Record edited successfully";
