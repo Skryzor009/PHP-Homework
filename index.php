@@ -30,7 +30,7 @@
     }
   }
 
-if($Furnizori!=""){
+if($_POST["Furnizori"]!=""){
 	$sql = "INSERT INTO TvLEwEK10r.Table_1 (Furnizori)
 		VALUES ('$Furnizori')";
 	if ($conn->query($sql) === TRUE) {
