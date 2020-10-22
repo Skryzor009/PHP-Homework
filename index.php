@@ -68,16 +68,16 @@ if($_POST["Furnizori"]!=""){
  <?php
 
 
-//if (isset($_POST['name'])){
+if (isset($_POST['name'])){
 
 
-  $sql = "DELETE FROM TvLEwEK10r.Table_1 WHERE ID=12";
+  $sql = "DELETE FROM TvLEwEK10r.Table_1 WHERE ID=".$_POST['name'];
   if ($conn->query($sql) === TRUE) {
 	echo "Record deleted successfully";
   } else {
 	echo "Error deleting record: " . $conn->error;
   }
-//}
+}
 
 ?>
 </form>
