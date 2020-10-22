@@ -14,6 +14,36 @@
   }
   echo "Connected successfully";
 
+
+
+  
+  $sql = "SELECT idnew_table,name, email, password FROM o8LxL7h9xu.form_table";
+  $result = $conn->query($sql);
+  echo "<br><h2>Your Input:</h2>";
+  echo '<table><tr>';
+  echo '<th>'."id ".'</th>';
+  echo '<th>'."Nume ".'</th>';
+  echo '<th>'."Email".'</th>';
+  echo '<th>'."Parola".'</th>';
+  
+  echo '</tr><tbody>';
+  if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>". $row["idnew_table"].'</td>'."<td>". $row["name"].'</td>'. "<td>". $row["email"].'</td>'. "<td>" . $row["password"] .'</td>';
+		echo '</tr>';
+	}
+  } else {
+	echo "0 results";
+  }
+
+
+
+
+
+
+
+
 $myfrm = '
 <!doctype html>
 <html>
@@ -76,3 +106,4 @@ if (!isset($_POST['sir_numere'])) {
 
 	}
 }
+?>
