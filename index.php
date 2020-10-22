@@ -12,7 +12,7 @@
  <?php
 
 
-if (isset($_POST['name'])){
+//if (isset($_POST['name'])){
 
 
   $sql = "DELETE FROM TvLEwEK10r.Table_1 WHERE ID=12";
@@ -21,7 +21,7 @@ if (isset($_POST['name'])){
   } else {
 	echo "Error deleting record: " . $conn->error;
   }
-}
+//}
 
 ?>
 </form>
